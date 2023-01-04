@@ -1,3 +1,11 @@
+html{
+    background: url("https://images7.alphacoders.com/583/583269.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 body{
     margin: 0;
 }
@@ -15,9 +23,12 @@ body{
 .header_button{
     display: inline-block;
     margin-top: -15px;
+    margin-left: -57px;
     text-align: center;
     height: 70px;
+    min-height: 70px;
     width: 200px;
+    min-width: 200px;
     color: #d3d3d3;
 }
 
@@ -27,10 +38,26 @@ body{
     border: solid 1px #cccccc;
     color: #fff;
     box-shadow: 0px 0px 15px #cccccc;
+    height: 70px;
+    min-height: 70px;
+    width: 200px;
+    min-width: 200px;
     background-color: #303751;
     cursor: pointer;
 }
 
 .hb_inner_text{
     margin-left: 7px;
+}
+
+.container{
+    display: inline-block;
+    min-height: 849px;
+    height: fit-content;
+    width: fit-content;
+    min-width: 1520px;
+    opacity: 90%;
+    margin-left: 200px;
+    background-color: #3a3a3b;
+    color: #ffffff;
 }
