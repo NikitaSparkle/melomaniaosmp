@@ -12,8 +12,6 @@ html{
     margin: 0;
 }
 
-
-
 .header{
     min-width: 750px;
     width: 100%;
@@ -45,7 +43,6 @@ html{
 
 .back{
     display: flex;
-    padding: 0px 240px;
 }
 
 .container{
@@ -53,21 +50,45 @@ html{
     min-width: 750px;
     height: 100%;
     background-color: #3a3a3b;
-    opacity: 95%;
     color: #ffffff;
     padding: 10px 10px 10px;
-    justify-content: center;
+    display: inline-block;
+    opacity: 90%;
 }
 
-.title{
-    color: #ffffff;
-    padding: 0px 10px 20px;
-    display: flex;
-    justify-content: center;
+.art-container{
+    display: inline-block;
+    width: 750px;
+    padding: 10px 95px;
 }
 
-.text{
-    color: #ffffff;
-    padding: 0px 10px 20px;
+.art-img{
+    height: 50%;
+    width: 50%;
+    min-width: 750px;
+    border: solid 2px #000000;
+}
 
+
+.art-text{
+    background-color: #4b4b4d;
+    display: inline-block;
+    position: absolute;
+    opacity: 100%;
+    margin-top: -99px;
+    margin-left: 2px;
+    height: 10%;
+    width: 39%;
+    min-width: 750px;
+    min-height: 93px;
+    transition: 0.5s;
+}
+
+.art-title{
+    padding: 0px 5px;
+}
+
+.art-desc{
+    padding: 0px 5px;
+    display: none;
 }
