@@ -1,0 +1,93 @@
+html{
+    background: url("https://images7.alphacoders.com/583/583269.jpg") no-repeat center center fixed;
+    min-width: 750px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    min-width: 750px;
+    width: 100%;
+    height: 3.75rem;
+    background-color: #363d57;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_button{
+    color: #d3d3d3;
+    padding: 13px 20px 13px;
+    text-align: center;
+    height: 32px;
+    min-height: 32px;
+    width: 200px;
+    min-width: 200px;
+}
+
+.header_button:hover{
+    color: #fff;
+    border: solid 1px #cccccc;
+    box-shadow: 0px 0px 15px #cccccc;
+    padding: 13px 20px 13px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.back{
+    display: flex;
+}
+
+.container{
+    width: 100%;
+    min-width: 750px;
+    height: 100%;
+    background-color: #3a3a3b;
+    color: #ffffff;
+    padding: 10px 10px 10px;
+    display: inline-block;
+    opacity: 90%;
+}
+
+.date-cont{
+    height: fit-content;
+    width: 100%;
+    min-width: 750px;
+    border: 2px solid #57608a;
+    box-shadow: 0px 0px 15px #57608a;
+}
+
+.date{
+    display: inline-block;
+    padding: 10px 10px;
+}
+
+.mod-cont{
+    display: inline-block;
+    width: 90%;
+    height: fit-content;
+    padding: 10px 10px;
+}
+
+.mod-button{
+    display: inline-block;
+    background-color: #363d57;
+    border: solid 1px #000000;
+    color: #d3d3d3;
+    height: 50px;
+    width: 200px;
+}
+
+.mod-button:hover{
+    cursor: pointer;
+    color: #fff;
+    border: solid 1px #cccccc;
+    box-shadow: 0px 0px 15px #cccccc;
+}
