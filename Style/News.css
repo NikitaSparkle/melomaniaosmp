@@ -88,6 +88,12 @@ html{
     padding: 0px 5px;
 }
 
+.art-data{
+    padding: 10px 10px;
+    color: #ababb0;
+    display: inline-block;
+}
+
 .art-desc{
     padding: 0px 5px;
     display: none;
