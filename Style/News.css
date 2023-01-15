@@ -51,7 +51,6 @@ html{
     height: 100%;
     background-color: #3a3a3b;
     color: #ffffff;
-    padding: 10px 10px 10px;
     display: inline-block;
     opacity: 90%;
 }
@@ -59,7 +58,8 @@ html{
 .art-container{
     display: inline-block;
     width: 750px;
-    padding: 10px 95px;
+    margin-left: 135px;
+    margin-top: 24px;
 }
 
 .art-img{

@@ -1,49 +1,36 @@
-function art_cont_hover() {
-    document.getElementById('art_img').style.border = 'solid 2px #fff';
-    document.getElementById('art_img').style.boxShadow = '0px 0px 15px #cccccc';
-    document.getElementById('art_cont_text').style.height = '300px'
-    document.getElementById('art_cont_text').style.marginTop = '-306px'
-    document.getElementById('art_cont_text').style.opacity = '90%';
-    document.getElementById('container').style.opacity = '100%';
-    document.getElementById('art_text').style.display = 'inline-block'
-    document.getElementById('art_cont_text').style.overflowY = 'auto';
-    document.getElementById('container').style.transition = '0.5s';
-    document.getElementById('art_img').style.transition = '0.5s';
-    document.getElementById('art_cont_text').style.transition = '0.5s';
-}
+const host = 'http://localhost:5000';
 
-function art_cont_hover_2() {
-    document.getElementById('art_img_2').style.border = 'solid 2px #fff';
-    document.getElementById('art_img_2').style.boxShadow = '0px 0px 15px #cccccc';
-    document.getElementById('art_cont_text_2').style.height = '300px'
-    document.getElementById('art_cont_text_2').style.marginTop = '-306px'
-    document.getElementById('art_cont_text_2').style.opacity = '90%';
-    document.getElementById('container').style.opacity = '100%';
-    document.getElementById('art_text_2').style.display = 'inline-block'
-    document.getElementById('art_cont_text_2').style.overflowY = 'auto';
-    document.getElementById('container').style.transition = '0.5s';
-    document.getElementById('art_img_2').style.transition = '0.5s';
-    document.getElementById('art_cont_text_2').style.transition = '0.5s';
-}
+fetch(`${host}/getNews`).then((response) => {
+    response.json().then((data) => {
+        data.map((item) => {
 
-function art_cont_no_hover() {
-    document.getElementById('art_img').style.border = 'solid 2px #000';
-    document.getElementById('art_img').style.boxShadow = '';
-    document.getElementById('art_cont_text').style.height = '10%'
-    document.getElementById('art_cont_text').style.marginTop = '-99px'
-    document.getElementById('art_text').style.display = 'none';
-    document.getElementById('art_cont_text').style.overflowY = 'hidden';
-    document.getElementById('art_cont_text').style.opacity = '100%';
-    document.getElementById('container').style.opacity = '90%';
-}
+            let id = item.art_id;
 
-function art_cont_no_hover_2() {
-    document.getElementById('art_img_2').style.border = 'solid 2px #000';
-    document.getElementById('art_img_2').style.boxShadow = '';
-    document.getElementById('art_cont_text_2').style.height = '10%'
-    document.getElementById('art_cont_text_2').style.marginTop = '-99px'
-    document.getElementById('art_text_2').style.display = 'none';
-    document.getElementById('art_cont_text_2').style.overflowY = 'hidden';
-    document.getElementById('art_cont_text_2').style.opacity = '100%';
-    document.getElementById('container').style.opacity = '90%';
-}
+            let date = new Date(item.art_date);
+            let day = date.getDate();
+            let month = date.getMonth() + 1;
+            if (month < 10) {
+                month = "0" + month;
+            }
+            let year = date.getFullYear();
+
+            let normal_date = day + "." + month + "." + year;
+
+            let element = '        ' +
+                '       <div id="art_cont_'+id+'" class="art-container" onmouseover="art_cont_hover('+id+')" onmouseout="art_cont_no_hover('+id+')">\n' +
+                '            <img id="art_img_'+id+'" class="art-img" src="' + item.art_img + '" alt="No Image">\n' +
+                '            <br>\n' +
+                '            <div id="art_cont_text_'+id+'" class="art-text">\n' +
+                '                <h1 id="art_title_'+id+'" class="art-title">' + item.art_title + '</h1>\n' +
+                '                <br>\n' +
+                '                <h3 class="art-data">' + normal_date + '</h3>\n' +
+                '                <br>\n' +
+                '                <h3 id="art_text_'+id+'" class="art-desc">' + item.art_text + '</h3>\n' +
+                '            </div>\n' +
+                '        </div>\n'
+
+            document.getElementById('container').innerHTML += element;
+
+        })
+    })
+})
