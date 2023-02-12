@@ -1,0 +1,261 @@
+html {
+    background: url("https://images7.alphacoders.com/583/583269.jpg") no-repeat center center fixed;
+    min-width: 750px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.header {
+    min-width: 750px;
+    width: 100%;
+    height: 3.75rem;
+    background-color: #363d57;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_button {
+    color: #d3d3d3;
+    padding: 13px 20px 13px;
+    text-align: center;
+    height: 32px;
+    min-height: 32px;
+    width: 200px;
+    min-width: 200px;
+    transition: 0.5s;
+}
+
+.header_button:hover {
+    color: #fff;
+    border: solid 1px #cccccc;
+    box-shadow: 0px 0px 15px #cccccc;
+    padding: 13px 20px 13px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.back {
+    display: flex;
+}
+
+.container {
+    width: 100%;
+    min-width: 750px;
+    height: 100%;
+    background-color: #3a3a3b;
+    color: #ffffff;
+    padding: 10px 10px 10px;
+    display: inline-block;
+    opacity: 90%;
+}
+
+.category-buttons {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-button {
+    height: 30px;
+    width: 200px;
+    color: #d3d3d3;
+    background-color: #363d57;
+    border: solid 1px #000000;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.category-button:hover {
+    background-color: #363d57;
+    color: #fff;
+    border: solid 1px #cccccc;
+    box-shadow: 0px 0px 15px #cccccc;
+    cursor: pointer;
+}
+
+.category-button-text {
+    margin-top: 3px;
+}
+
+.main-cont {
+    height: 100%;
+    width: 100%;
+    border: 1px solid #000000;
+    display: inline-block;
+}
+
+.ch-cont {
+    height: fit-content;
+    width: fit-content;
+    display: inline-block;
+    opacity: 100%;
+    transition: 0.5s;
+}
+
+.character {
+    height: fit-content;
+    width: fit-content;
+    background-color: #49494b;
+    border: 2px solid #000000;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.ch-img {
+    max-width: 250px;
+    display: inline-block;
+}
+
+.ch-sh-desc{
+    height: 309px;
+    width: 295px;
+    background-color: #5e5e60;
+    display: none;
+    overflow-y: auto;
+    transition: 0.5s;
+}
+
+.ch-desc{
+    height: 350px;
+    width: 550px;
+    background-color: #5e5e60;
+    display: none;
+    overflow-y: auto;
+    transition: 0.5s;
+}
+
+.ch-close{
+    display: none;
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 5px;
+    background-color: #5e5e60;
+    border: 2px solid #000000;
+    transition: 0.5s;
+}
+
+.ch-close:hover{
+    cursor: pointer;
+}
+
+.ch-close-img{
+    width: 40px;
+}
+
+.loc-cont {
+    height: fit-content;
+    width: fit-content;
+    display: none;
+    opacity: 0%;
+    margin-top: 1000px;
+    transition: 0.5s;
+}
+
+.location {
+    height: fit-content;
+    width: fit-content;
+    background-color: #49494b;
+    border: 2px solid #000000;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.loc-img {
+    max-width: 250px;
+    transition: 0.5s;
+}
+
+.loc-desc{
+    height: 350px;
+    width: 550px;
+    background-color: #5e5e60;
+    display: none;
+    overflow-y: auto;
+    transition: 0.5s;
+}
+
+.loc-close{
+    display: none;
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 5px;
+    background-color: #5e5e60;
+    border: 2px solid #000000;
+}
+
+.loc-close:hover{
+    cursor: pointer;
+}
+
+.loc-close-img{
+    width: 40px;
+}
+
+.event {
+    height: fit-content;
+    width: fit-content;
+    background-color: #49494b;
+    border: 2px solid #000000;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.ev-cont {
+    height: fit-content;
+    width: fit-content;
+    display: none;
+    opacity: 0%;
+    margin-top: 1000px;
+    transition: 0.5s;
+}
+
+.ev-img {
+    max-width: 250px;
+    transition: 0.5s;
+}
+
+.ev-desc{
+    height: 350px;
+    width: 550px;
+    background-color: #5e5e60;
+    display: none;
+    overflow-y: auto;
+    transition: 0.5s;
+}
+
+.ev-close{
+    display: none;
+    position: absolute;
+    margin-left: 0px;
+    margin-top: 5px;
+    background-color: #5e5e60;
+    border: 2px solid #000000;
+}
+
+.ev-close:hover{
+    cursor: pointer;
+}
+
+.ev-close-img{
+    width: 40px;
+}
